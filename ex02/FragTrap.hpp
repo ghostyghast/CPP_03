@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 13:54:23 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 21:47:20 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/23 01:16:02 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FRAGTRAP_HPP
 # include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap
+class FragTrap : public ClapTrap
 {
 	public:
 		//Constructors
@@ -23,9 +23,10 @@ class FragTrap : ClapTrap
 			FragTrap(FragTrap &copy);
 		//Destructor
 			~FragTrap();
+		//Operator overload
+			FragTrap	&operator=(FragTrap &copy);
 		//Methods
 			void	highFivesGuys(void);
-		//Operator overload
 };
 
 #endif

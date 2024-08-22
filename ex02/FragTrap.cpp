@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:39:28 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 21:47:20 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/23 01:29:20 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,23 @@ FragTrap::FragTrap(string name) : ClapTrap(name)
 FragTrap::FragTrap(FragTrap &copy) : ClapTrap(copy)
 {
     cout << "FragTrap copy constructor called\n";
-    this->_name = copy._name;
-    this->_HP = copy._HP;
-    this->_AP = copy._AP;
-    this->_EP = copy._EP;
 }
 
 FragTrap::~FragTrap()
 {
     cout << "FragTrap Destructor Called\n";
+}
+
+FragTrap	&FragTrap::operator=(FragTrap &copy)
+{
+	this->_name = copy._name;
+    this->_HP = copy._HP;
+    this->_AP = copy._AP;
+    this->_EP = copy._EP;
+	return (*this);
+}
+
+void	FragTrap::highFivesGuys(void)
+{
+	cout << this->_name << ": High fives anyone?!\n";
 }
