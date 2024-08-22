@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 00:34:35 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 13:52:33 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/22 21:47:20 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 	this->_EP = 50;
 	this->_AP = 20;
 	this->_guardMode = false;
-	cout << "ScavTrap contructor called\n";
+	cout << "ScavTrap default contructor called\n";
 }
 
 ScavTrap::ScavTrap(string name) : ClapTrap(name)
