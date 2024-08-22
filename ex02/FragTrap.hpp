@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 00:34:30 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 13:39:22 by amaligno         ###   ########.fr       */
+/*   Created: 2024/08/22 13:54:23 by amaligno          #+#    #+#             */
+/*   Updated: 2024/08/22 13:55:35 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SAVPTRAP_HPP
-# include "ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class FragTrap : ClapTrap
 {
 	private:
-		bool	_guardMode;
+		/* data */
 	public:
-		//Constructors
-		ScavTrap(void);
-		ScavTrap(string name);
-		ScavTrap(const ScavTrap &copy);
-		//Destructor
-		~ScavTrap();
-		//Operator overloads
-		ScavTrap	&operator=(const ScavTrap &copy);
-		//Methods
-		void	guardGate(void);
+		//Contr
+		FragTrap(/* args */);
+		~FragTrap();
 };
-
-#endif

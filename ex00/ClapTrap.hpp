@@ -6,11 +6,13 @@
 /*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 20:22:12 by pringles          #+#    #+#             */
-/*   Updated: 2023/12/29 21:04:57 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/20 23:38:13 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+# include <string>
 using std::string;
 
 class ClapTrap{
@@ -24,11 +26,17 @@ class ClapTrap{
             bool    canDo(void);
     public:
         //Constructors
+			ClapTrap(void);
             ClapTrap(string name);
+			ClapTrap(const ClapTrap &copy);
         //Destructor
             ~ClapTrap();
         //methods
             void    attack(const string &target);
             void    takeDamage(unsigned int amount);
             void    beRepaired(unsigned int amount);
+		//Copy assignment operator
+			ClapTrap	&operator=(const ClapTrap &copy);
 };
+
+#endif
