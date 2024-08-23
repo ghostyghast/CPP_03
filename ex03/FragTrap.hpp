@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/30 00:34:30 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/23 18:25:08 by amaligno         ###   ########.fr       */
+/*   Created: 2024/08/22 13:54:23 by amaligno          #+#    #+#             */
+/*   Updated: 2024/08/23 18:51:35 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
-	private:
-		bool	_guardMode;
 	public:
 		//Constructors
-		ScavTrap(void);
-		ScavTrap(string name);
-		ScavTrap(const ScavTrap &copy);
+			FragTrap();
+			FragTrap(string name);
+			FragTrap(FragTrap &copy);
 		//Destructor
-		~ScavTrap();
-		//Operator overloads
-		ScavTrap	&operator=(const ScavTrap &copy);
+			~FragTrap();
+		//Operator overload
+			FragTrap	&operator=(FragTrap &copy);
 		//Methods
-		void	guardGate(void);
+			void	highFivesGuys(void);
 };
 
 #endif

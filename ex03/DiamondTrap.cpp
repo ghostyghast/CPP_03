@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,37 +10,38 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 using std::cout;
 
-FragTrap::FragTrap() : ClapTrap()
+DiamondTrap::DiamondTrap() : ClapTrap()
 {
-    cout << "FragTrap default contructor called\n";
+    cout << "DiamondTrap default contructor called\n";
+    this->_name = "Default DiamondTrap";
     this->_HP = 100;
     this->_EP = 100;
     this->_AP = 30;
 }
 
-FragTrap::FragTrap(string name) : ClapTrap(name)
+DiamondTrap::DiamondTrap(string name) : ClapTrap(name)
 {
-    cout << "FragTrap contructor called\n";
+    cout << "DiamondTrap contructor called\n";
     this->_HP = 100;
     this->_EP = 100;
     this->_AP = 30;
 }
 
-FragTrap::FragTrap(FragTrap &copy) : ClapTrap(copy)
+DiamondTrap::DiamondTrap(DiamondTrap &copy) : ClapTrap(copy)
 {
-    cout << "FragTrap copy constructor called\n";
+    cout << "DiamondTrap copy constructor called\n";
 }
 
-FragTrap::~FragTrap()
+DiamondTrap::~DiamondTrap()
 {
-    cout << "FragTrap Destructor Called\n";
+    cout << "DiamondTrap Destructor Called\n";
 }
 
-FragTrap	&FragTrap::operator=(FragTrap &copy)
+DiamondTrap	&DiamondTrap::operator=(DiamondTrap &copy)
 {
 	this->_name = copy._name;
     this->_HP = copy._HP;
@@ -49,8 +50,8 @@ FragTrap	&FragTrap::operator=(FragTrap &copy)
 	return (*this);
 }
 
-void	FragTrap::highFivesGuys(void)
+void    DiamondTrap::whoAmI(void)
 {
-    if (canDo())
-        cout << this->_name << ": High fives anyone?!\n";
+    cout << "DiamondTrap name: " << this->_name << "\n";
+    cout << "ClapTrap name: " << ClapTrap::_name << '\n';
 }

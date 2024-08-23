@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/29 20:21:04 by pringles          #+#    #+#             */
-/*   Updated: 2024/08/20 23:39:49 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/23 18:26:14 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
 	if (this->_HP <= 0)
 	{
 		_HP = 0;
-		cout << "I dont think " << this->_name << " can take anymore damage...";
+		cout << "I dont think " << this->_name << " can take anymore damage...\n";
 	}
 	else
 	{
