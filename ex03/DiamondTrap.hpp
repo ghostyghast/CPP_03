@@ -28,6 +28,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		//Operator overload
 			DiamondTrap	&operator=(DiamondTrap &copy);
 		//Methods
+		void	attack(const string &name);
 		void	whoAmI();
 	private:
 		string	_name;

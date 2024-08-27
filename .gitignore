@@ -1,2 +1,6 @@
-*.o
-borderlands
+*
+
+!*/
+!*.cpp
+!*.hpp
+!Makefile

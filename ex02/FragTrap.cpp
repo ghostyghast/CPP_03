@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 21:39:28 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/23 18:30:19 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/26 15:56:21 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ FragTrap::FragTrap(string name) : ClapTrap(name)
     this->_AP = 30;
 }
 
-FragTrap::FragTrap(FragTrap &copy) : ClapTrap(copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
     cout << "FragTrap copy constructor called\n";
 }
@@ -40,7 +40,7 @@ FragTrap::~FragTrap()
     cout << "FragTrap Destructor Called\n";
 }
 
-FragTrap	&FragTrap::operator=(FragTrap &copy)
+FragTrap	&FragTrap::operator=(const FragTrap &copy)
 {
 	this->_name = copy._name;
     this->_HP = copy._HP;

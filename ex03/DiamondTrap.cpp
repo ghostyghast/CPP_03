@@ -14,31 +14,38 @@
 #include <iostream>
 using std::cout;
 
-DiamondTrap::DiamondTrap() : ClapTrap()
+DiamondTrap::DiamondTrap() : ClapTrap("Defalt DiamondTrap_clap_trap"), FragTrap(), ScavTrap()
 {
     cout << "DiamondTrap default contructor called\n";
     this->_name = "Default DiamondTrap";
-    this->_HP = 100;
-    this->_EP = 100;
-    this->_AP = 30;
+    this->_HP = FragTrap::_HP;
+    this->_EP = ScavTrap::_EP;
+    this->_AP = FragTrap::_AP;
 }
 
-DiamondTrap::DiamondTrap(string name) : ClapTrap(name)
+DiamondTrap::DiamondTrap(string name) : ClapTrap(name + "_clap_trap"), FragTrap(name), ScavTrap(name)
 {
     cout << "DiamondTrap contructor called\n";
-    this->_HP = 100;
-    this->_EP = 100;
-    this->_AP = 30;
+    this->_name = name;
+    this->_HP = FragTrap::_HP;
+    this->_EP = ScavTrap::_EP;
+    this->_AP = FragTrap::_AP;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap &copy) : ClapTrap(copy)
+DiamondTrap::DiamondTrap(DiamondTrap &copy) : ClapTrap(copy), FragTrap(copy), ScavTrap(copy)
 {
+    *this = copy;
     cout << "DiamondTrap copy constructor called\n";
 }
 
 DiamondTrap::~DiamondTrap()
 {
     cout << "DiamondTrap Destructor Called\n";
+}
+
+void    DiamondTrap::attack(const string &target)
+{
+    ScavTrap::attack(target);
 }
 
 DiamondTrap	&DiamondTrap::operator=(DiamondTrap &copy)

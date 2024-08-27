@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 00:34:35 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 13:52:33 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:28:33 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
 	cout << "Scavtrap copy construcor called\n";
+	this->_guardMode = copy._guardMode;
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &copy)
 {
+	cout << "Scavtrap assignement operator called\n";
 	this->_name = copy._name;
 	this->_EP = copy._EP;
 	this->_HP = copy._HP;
@@ -53,6 +55,8 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::guardGate(void)
 {
+	if (!canDo())
+		return ;
 	if (!this->_guardMode)
 	{
 		this->_guardMode = true;

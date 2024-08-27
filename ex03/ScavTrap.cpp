@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 00:34:35 by amaligno          #+#    #+#             */
-/*   Updated: 2024/08/22 21:47:20 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:10:45 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::guardGate(void)
 {
+	if (!canDo())
+		return ;
 	if (!this->_guardMode)
 	{
 		this->_guardMode = true;
